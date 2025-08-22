@@ -166,16 +166,36 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen p-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-100 mb-2">
-            TDEE Calculator
-          </h1>
-          <p className="text-gray-400 text-lg">
-            Calculate Your Total Daily Energy Expenditure
-          </p>
-        </div>
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 p-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold text-gray-100 mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              CalorieCalc
+            </h1>
+            <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+              Your personal Total Daily Energy Expenditure calculator. Discover your perfect calorie intake 
+              and macronutrient balance to achieve your fitness goals.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                <div className="text-yellow-500 text-2xl mb-2">⚡</div>
+                <h3 className="font-semibold text-gray-100 mb-2">Accurate Calculations</h3>
+                <p className="text-sm text-gray-400">Based on Mifflin-St Jeor equation for precise results</p>
+              </div>
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                <div className="text-yellow-500 text-2xl mb-2">🎯</div>
+                <h3 className="font-semibold text-gray-100 mb-2">Goal-Oriented</h3>
+                <p className="text-sm text-gray-400">Custom plans for maintenance, cutting, and bulking</p>
+              </div>
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                <div className="text-yellow-500 text-2xl mb-2">📊</div>
+                <h3 className="font-semibold text-gray-100 mb-2">Macro Tracking</h3>
+                <p className="text-sm text-gray-400">Three diet styles with detailed macronutrient breakdown</p>
+              </div>
+            </div>
+          </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -494,6 +514,23 @@ export default function Home() {
           </div>
         )}
       </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-900 border-t border-gray-800 py-6">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-gray-400">
+            Made with ❤️ and dedication by{' '}
+            <a 
+              href="https://juan-oclock.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-yellow-500 hover:text-yellow-400 transition-colors font-medium"
+            >
+              juan-oclock
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
